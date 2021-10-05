@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<title>Home</title>
+			<style type="text/css">
+				span {
+					color: black;
+					background: greenyellow;
+				}
+			</style>
+</head>
+<body>
+		<div id="head">
+			<h1>Welcom To Mysite</h1>
+		</div>
+		<div>
+			<button id="btn1" onclick="myfunction()">Button1</button>
+			<button id="btn2">Button2</button>
+			
+			<p class="para1">
+				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of <span> type and scrambled </span>it to make a type specimen book.
+			</p>
+			
+			<p class="para2">
+				It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of<span> Letraset sheets </span>containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+			</p>
+
+			<span>The Great Indian Fest</span>
+			
+			<hr>
+
+			<button><a href="{% url 'login' %}">Login</a></button>
+			<button><a href="{% url 'signup' %}">Sign Up</a></button>
+			<script type="text/javascript">
+				$(document).ready(function() {
+					$('#head').css({'color': 'darkgray', 'background-color': 'blue', 'padding': '5px', 'margin':'10px', 'text-align': 'center'});
+					
+					$('#btn1').click(function () {
+						$('.para1').css({'color': 'brown', 'background-color':'yellow'});
+					});
+
+					$('#btn2').click(function() {
+						$('.para2').css({'color': 'red', 'background-color': 'blue', 'text-align': 'justify'});
+					});
+
+					$('p span').css({'color':'voilet', 'background-color': 'pink', 'padding': 'auto', 'margin': '5px'});
+				});
+
+				function myfunction() {
+					document.getElementById('btn1').innerHTML = "affedcted";					
+				};
+			</script>
+		</div>
+</body>
+</html>
